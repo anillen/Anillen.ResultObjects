@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anillen.ResultObjects", "Anillen.ResultObjects\Anillen.ResultObjects.csproj", "{2BF78624-A89F-446D-A99B-920CFAF13845}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anillen.ResultObjects.Tests", "Anillen.ResultObjects.Tests\Anillen.ResultObjects.Tests.csproj", "{760E1CA8-7A76-451D-BAFE-93716FCE59C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BF78624-A89F-446D-A99B-920CFAF13845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BF78624-A89F-446D-A99B-920CFAF13845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BF78624-A89F-446D-A99B-920CFAF13845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BF78624-A89F-446D-A99B-920CFAF13845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{760E1CA8-7A76-451D-BAFE-93716FCE59C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{760E1CA8-7A76-451D-BAFE-93716FCE59C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{760E1CA8-7A76-451D-BAFE-93716FCE59C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{760E1CA8-7A76-451D-BAFE-93716FCE59C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
