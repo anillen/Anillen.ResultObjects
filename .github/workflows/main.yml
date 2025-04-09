@@ -24,4 +24,4 @@ jobs:
 
     - name: Publish to NuGet
       if: github.ref == 'refs/heads/main'
-      run: dotnet nuget push $(PackageOutputPath)/$(PackageId).$(PackageVersion).nupkg --api-key ${{ Production.NUGET_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+      run: dotnet nuget push $(PackageOutputPath)/$(PackageId).$(PackageVersion).nupkg --api-key $(NUGET_KEY) --source https://api.nuget.org/v3/index.json --skip-duplicate
