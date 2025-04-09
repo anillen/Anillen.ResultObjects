@@ -17,7 +17,9 @@ jobs:
       with:
         dotnet-version: 9.0.x
 
-    - name: Build and Pack
+    - name: Build
+      run: dotnet build --configuration Release
+    - name: Pack
       run: dotnet pack --configuration Release --output nupkgs
 
     - name: Publish to NuGet
