@@ -13,7 +13,4 @@
         <RepositoryUrl>https://github.com/anillen/Anillen.ResultObjects</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
     </PropertyGroup>
-    <Target Name="PublishPackageToServer" AfterTargets="Pack">
-        <Exec Command="dotnet nuget push -s RadoNuget -k UkIN55aMadhBeWZ6F9eyTmDiWXGttS $(PackageOutputPath)/$(PackageId).$(PackageVersion).nupkg --skip-duplicate"/>
-    </Target>
 </Project>
