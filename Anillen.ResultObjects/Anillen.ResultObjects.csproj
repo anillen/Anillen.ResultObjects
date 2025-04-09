@@ -1,4 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="SecretKeys.proj" Condition="Exists('SecretKeys.proj')" />
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -12,4 +13,11 @@
         <RepositoryUrl>https://github.com/anillen/Anillen.ResultObjects</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
     </PropertyGroup>
+    <ItemGroup>
+      <Content Include="SecretKeys.proj" />
+    </ItemGroup>
+
+    <Target Name="PublishPackageToServer" AfterTargets="Pack">
+        <Exec Command="dotnet nuget push -s RadoNuget -k $(NuGetSecretKey) $(PackageOutputPath)/$(PackageId).$(PackageVersion).nupkg --skip-duplicate"/>
+    </Target>
 </Project>
