@@ -22,10 +22,15 @@ jobs:
         dotnet-version: 9.0.x
     - name: Restore dependencies
       run: dotnet restore
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build for test
+      run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      
+    - name: Build for release
+      run: dotnet build --configuration Release --no-restore
     - name: Pack
       run: dotnet pack --configuration Release
     - name: Push to NuGet
