@@ -4,12 +4,21 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>9.0.2</Version>
+        <Version>9.0.3</Version>
         <Authors>Anillen</Authors>
         <PackageOutputPath>Package</PackageOutputPath>
         <PackAsTool>False</PackAsTool>
-        <Description>https://github.com/anillen/Anillen.ResultObjects</Description>
+        <Description>Простая и удобная реализация паттерна Result Object для .NET, позволяющая обрабатывать ошибки без использования исключений.</Description>
         <RepositoryUrl>https://github.com/anillen/Anillen.ResultObjects</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
+        <Title>Библиотека Result Object</Title>
+        <PackageIcon>error.png</PackageIcon>
+        <PackageTags>.NET ResultObject Pattern</PackageTags>
     </PropertyGroup>
+    <ItemGroup>
+      <None Update="error.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
 </Project>
