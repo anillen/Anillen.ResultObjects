@@ -38,14 +38,5 @@ public Result<Customer> GetCustomer(int id)
         : Result.Failure<Customer>(new Error("404", "Not found"));
 }
 ```
-
-## 🤝 Как внести вклад
-
-1. Форкните репозиторий
-2. Создайте ветку для вашей фичи (`git checkout -b feature/AmazingFeature`)
-3. Сделайте коммит изменений (`git commit -m 'Add some AmazingFeature'`)
-4. Запушьте ветку (`git push origin feature/AmazingFeature`)
-5. Откройте Pull Request
-
 ---
 ⭐ Если проект вам понравился, поставьте звезду на GitHub!
