@@ -4,7 +4,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Version>9.0.2</Version>
+        <Version>9.0.3</Version>
         <Authors>Anillen</Authors>
         <PackageOutputPath>Package</PackageOutputPath>
         <PackAsTool>False</PackAsTool>
