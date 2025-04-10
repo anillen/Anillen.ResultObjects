@@ -33,9 +33,9 @@ public Result<Customer> GetCustomer(int id)
         return Result.Failure<Customer>(new Error("400", "Id is not valid"));
 
     var customer = _repository.Find(id);
-    return customer != null 
+    return customer is not null 
         ? Result.Success(customer) 
-        : Result.Failure<Customer>(new Error("404", "NotFoundError"));
+        : Result.Failure<Customer>(new Error("404", "Not found"));
 }
 ```
 
