@@ -30,7 +30,7 @@ dotnet add package Anillen.ResultObjects
 public Result<Customer> GetCustomer(int id)
 {
     if (id <= 0)
-        return Result.Fail<Customer>(new Error("400", "Id is not valid"));
+        return Result.Failure<Customer>(new Error("400", "Id is not valid"));
 
     var customer = _repository.Find(id);
     return customer != null 
