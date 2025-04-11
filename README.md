@@ -27,15 +27,15 @@ dotnet add package Anillen.ResultObjects
 
 ### Базовый сценарий
 ```csharp
-public Result<Customer> GetCustomer(int id)
+public ResultValue<Customer> GetCustomer(int id)
 {
     if (id <= 0)
-        return Result.Failure<Customer>(new Error("400", "Id is not valid"));
+        return ResultValue.Failure<Customer>(new Error("400", "Id is not valid"));
 
     var customer = _repository.Find(id);
     return customer is not null 
-        ? Result.Success(customer) 
-        : Result.Failure<Customer>(new Error("404", "Not found"));
+        ? ResultValue.Success(customer) 
+        : ResultValue.Failure<Customer>(new Error("404", "Not found"));
 }
 ```
 ---
