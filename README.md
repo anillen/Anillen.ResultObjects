@@ -38,5 +38,22 @@ public ResultValue<Customer> GetCustomer(int id)
         : ResultValue.Failure<Customer>(new Error("404", "Not found"));
 }
 ```
+
+### Только результат операции
+```csharp
+public Result SendMessage(string message)
+{
+    if (string.IsNullOrEmpty(message))
+        return Result.Failure(new Error("400", "Message is not valid"));
+    try
+    {
+        _messageService.SendMessage(message);
+        return Result.Success();
+    } catch(Exception ex)
+    {
+        return Result.Failure(new Error("SendMessageError", ex.Message));
+    }
+}
+```
 ---
 ⭐ Если проект вам понравился, поставьте звезду на GitHub!
