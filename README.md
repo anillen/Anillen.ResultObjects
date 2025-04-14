@@ -27,15 +27,32 @@ dotnet add package Anillen.ResultObjects
 
 ### Базовый сценарий
 ```csharp
-public Result<Customer> GetCustomer(int id)
+public ResultValue<Customer> GetCustomer(int id)
 {
     if (id <= 0)
-        return Result.Failure<Customer>(new Error("400", "Id is not valid"));
+        return ResultValue.Failure<Customer>(new Error("400", "Id is not valid"));
 
     var customer = _repository.Find(id);
     return customer is not null 
-        ? Result.Success(customer) 
-        : Result.Failure<Customer>(new Error("404", "Not found"));
+        ? ResultValue.Success(customer) 
+        : ResultValue.Failure<Customer>(new Error("404", "Not found"));
+}
+```
+
+### Только результат операции
+```csharp
+public Result SendMessage(string message)
+{
+    if (string.IsNullOrEmpty(message))
+        return Result.Failure(new Error("400", "Message is not valid"));
+    try
+    {
+        _messageService.SendMessage(message);
+        return Result.Success();
+    } catch(Exception ex)
+    {
+        return Result.Failure(new Error("SendMessageError", ex.Message));
+    }
 }
 ```
 ---
